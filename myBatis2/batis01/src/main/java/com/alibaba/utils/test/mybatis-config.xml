@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 引入properties文件 -->
+	<properties resource="db.properties"/>
+	
+	<settings>
+		<!-- 将数据库字段中的下划线命名改为java的驼峰命名 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+
+  <environments default="development">
+  	<!-- 每个environment代表数据库的环境配置 -->
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+      	<!-- ${}代表从java的一个properties中获取指定参数名的值-->
+        <property name="driver" value="${driverClass}"/>
+        <property name="url" value="${jdbcUrl}"/>
+        <property name="username" value="${user}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <!-- 注册编写的包含sql的xml文件 -->
+   <mappers>
+    <mapper resource="emplyeesql.xml"/>
+  </mappers> 
+</configuration>
