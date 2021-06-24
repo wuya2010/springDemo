@@ -13,6 +13,7 @@ import java.util.List;
 /*
  * 1.Mybatis介绍
  * 		是一个java编写的轻量级半自动的ORM映射的持久化层框架。
+ *      fixme: 半自动
  *
  * 		Object Relitional Mapping(对象关系映射)：  将java的对象和关系型数据库中的记录一一对象
  *

@@ -14,7 +14,8 @@ import java.util.List;
 public class UserDaoTest {
 
     @Test
-    public void test(){
+    public void test() {
+        //静态方法的调用
         SqlSession sqlSession = MybatisUtils.getSqlSession();
 
         //使用getMapper 执行 sql 语句

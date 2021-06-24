@@ -4,10 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<!--namespace=绑定一个对应的Dao/Mapper接口,相当于实现了接口-->
-<mapper namespace="UserDao">
+<!--namespace=绑定一个对应的Dao/Mapper接口,相当于实现了接口, 全类路径-->
+<mapper namespace="com.alibaba.dao.UserDao">
     <!--id=使用的方法名， resultType=返回结果集的类型（全路径）    -->
     <select id="getUserList" resultType="com.alibaba.pojo.User">
-          select * from wangsql.stu
-      </select>
+        select * from wangsql.stu
+    </select>
 </mapper>
